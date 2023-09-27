@@ -199,3 +199,4 @@ test2.py
 .vscode/
 # *.png
 *.csv
+*.env
