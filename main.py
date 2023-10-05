@@ -25,7 +25,7 @@ producer_conf = {
 }
 
 consumer = Consumer(consumer_conf)
-consumer.subscribe([settings.KAFKA_CLEANED_TEXT_TOPIC])
+consumer.subscribe([settings.KAFKA_STREAM_TEXT_TOPIC])
 
 producer = Producer(producer_conf)
 
@@ -66,4 +66,4 @@ def shutdown():
     running = False
 
 if __name__ == '__main__':
-    consume_produce_loop(consumer, [settings.KAFKA_CLEANED_TEXT_TOPIC], settings.KAFKA_NER_TOPIC)
+    consume_produce_loop(consumer, [settings.KAFKA_STREAM_TEXT_TOPIC], settings.KAFKA_NER_TOPIC)

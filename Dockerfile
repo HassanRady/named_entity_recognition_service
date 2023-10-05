@@ -11,7 +11,4 @@ RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 RUN python -m spacy download en_core_web_sm
 
-
-# EXPOSE 9005:9005
-
-# CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "9005"]
+CMD ["python", "main.py"]
